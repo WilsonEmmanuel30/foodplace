@@ -108,6 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             move_uploaded_file($picture['tmp_name'], $filelocation);
             $msg = "Registered Successfully";
+            header("Location: verify.php?email=$email");
             $picError = $fnerror = $lnerror = $pherror = $emerror = $perror = $cperror = $aerror = $msg = "";
             $firstname = $lastname = $phone = $email = $password = $confirm_password = $allergies = "";
         } else {
